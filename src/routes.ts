@@ -1,21 +1,23 @@
 import { Router } from 'express';
+import { updateFull, updatePartial } from './controllers/updateController';
+import { asyncHandler } from './utils/asyncHandler';
 
 const router = Router();
 
 //CRIEM AS CONTROLLERS COM ESSES NOMES OU ALTERE AQUI COM AS QUE VOCÊ CRIOU
 
 //Select
-router.get('/resources', selectAll);
-router.get('/resources/:id', selectById);
+//router.get('/resources', selectAll);
+//router.get('/resources/:id', selectById);
 
 //Insert
-router.post('/resources', insert);
+//router.post('/resources', insert);
 
 //Update
-router.put('/resources/:id', updateFull);
-router.patch('/resources/:id', updatePartial);
+router.put('/resources/:id', asyncHandler(updateFull));
+router.patch('/resources/:id', asyncHandler(updatePartial));
 
 //Delete
-router.delete('/resources/:id', deleteById);
+//router.delete('/resources/:id', deleteById);
 
 export default router;
