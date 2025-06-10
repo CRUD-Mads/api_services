@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { updateFull, updatePartial } from './controllers/updateController';
 import { asyncHandler } from './utils/asyncHandler';
+import { insert } from './controllers/insertController'
 
 const router = Router();
 
@@ -11,7 +12,7 @@ const router = Router();
 //router.get('/resources/:id', selectById);
 
 //Insert
-//router.post('/resources', insert);
+router.post('/resources', asyncHandler(insert));
 
 //Update
 router.put('/resources/:id', asyncHandler(updateFull));

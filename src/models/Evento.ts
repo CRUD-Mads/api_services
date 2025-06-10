@@ -120,7 +120,7 @@ class Evento {
   }
 
   static async findById(id: number): Promise<Evento | null> {
-    const res = await pool.query("SELECT * FROM eventos WHERE id = $1", [id]);
+    const res = await pool.query("SELECT * FROM evento WHERE id = $1", [id]);
     if (res.rows.length === 0) return null;
     const row = res.rows[0];
     return new Evento(
@@ -136,7 +136,7 @@ class Evento {
   }
 
   static async findAll(): Promise<Evento[]> {
-    const res = await pool.query("SELECT * FROM eventos");
+    const res = await pool.query("SELECT * FROM evento");
     return res.rows.map(
       (row: Evento) =>
         new Evento(
@@ -154,7 +154,7 @@ class Evento {
 
   async insert(): Promise<number> {
     const res = await pool.query(
-      `INSERT INTO eventos (nome, descricao, data_inicio, data_fim, local_id, status, preco_entrada, imagem_url)
+      `INSERT INTO evento (nome, descricao, data_inicio, data_fim, local_id, status, preco_entrada, imagem_url)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id`,
       [
         this.nome,
@@ -175,7 +175,7 @@ class Evento {
     if (!this.id) throw new Error("ID é obrigatório para atualizar.");
 
     await pool.query(
-      `UPDATE eventos SET 
+      `UPDATE evento SET 
      nome = $1, 
      descricao = $2, 
      data_inicio = $3, 
@@ -216,12 +216,12 @@ class Evento {
 
     values.push(this.id); // Adiciona o ID no final dos valores
 
-    const query = `UPDATE eventos SET ${updates.join(", ")} WHERE id = $${values.length}`;
+    const query = `UPDATE evento SET ${updates.join(", ")} WHERE id = $${values.length}`;
     await pool.query(query, values);
   }
 
   static async delete(id: number): Promise<void> {
-    await pool.query("DELETE FROM eventos WHERE id = $1", [id]);
+    await pool.query("DELETE FROM evento WHERE id = $1", [id]);
   }
 }
 
