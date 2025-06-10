@@ -9,8 +9,8 @@ const router = Router();
 //CRIEM AS CONTROLLERS COM ESSES NOMES OU ALTERE AQUI COM AS QUE VOCÊ CRIOU
 
 //Select
-//router.get('/resources', selectAll);
-//router.get('/resources/:id', selectById);
+router.get('/resources', asyncHandler(selectAll));
+router.get('/resources/:id', asyncHandler(selectById));
 
 //Insert
 router.post('/resources', asyncHandler(insert));
