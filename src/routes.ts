@@ -2,14 +2,15 @@ import { Router } from 'express';
 import { updateFull, updatePartial } from './controllers/updateController';
 import { asyncHandler } from './utils/asyncHandler';
 import { insert } from './controllers/insertController'
+import {selectAll, selectById } from './controllers/selectController'
 
 const router = Router();
 
 //CRIEM AS CONTROLLERS COM ESSES NOMES OU ALTERE AQUI COM AS QUE VOCÊ CRIOU
 
 //Select
-//router.get('/resources', selectAll);
-//router.get('/resources/:id', selectById);
+router.get('/resources', asyncHandler(selectAll));
+router.get('/resources/:id', asyncHandler(selectById));
 
 //Insert
 router.post('/resources', asyncHandler(insert));
