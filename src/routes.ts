@@ -1,7 +1,8 @@
 import { Router } from 'express';
 import { updateFull, updatePartial } from './controllers/updateController';
 import { asyncHandler } from './utils/asyncHandler';
-import { insert } from './controllers/insertController'
+import { insert } from './controllers/insertController';
+import { deleteById } from './controllers/deleteController';
 
 const router = Router();
 
@@ -19,6 +20,6 @@ router.put('/resources/:id', asyncHandler(updateFull));
 router.patch('/resources/:id', asyncHandler(updatePartial));
 
 //Delete
-//router.delete('/resources/:id', deleteById);
+router.delete('/resources/:id', asyncHandler(deleteById));
 
 export default router;
