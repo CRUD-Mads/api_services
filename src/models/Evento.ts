@@ -12,6 +12,7 @@ class Evento {
   imagem_url?: string;
 
   constructor(
+    id: number | undefined,
     nome: string,
     data_inicio: string,
     data_fim: string,
@@ -140,6 +141,7 @@ class Evento {
     return res.rows.map(
       (row: Evento) =>
         new Evento(
+          row.id,
           row.nome,
           row.data_inicio,
           row.data_fim,
