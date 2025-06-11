@@ -29,6 +29,7 @@ class Evento {
     if (new Date(data_inicio) > new Date(data_fim)) throw new Error("Data de início não pode ser após a data de fim.");
     if (preco_entrada < 0 || null) throw new Error("Preço de entrada não pode ser negativo.");
 
+    this.id = id;
     this.nome = nome;
     this.data_inicio = data_inicio;
     this.data_fim = data_fim;
@@ -125,6 +126,7 @@ class Evento {
     if (res.rows.length === 0) return null;
     const row = res.rows[0];
     return new Evento(
+      row.id,
       row.nome,
       row.data_inicio,
       row.data_fim,
