@@ -11,19 +11,19 @@ A API fornece os seguintes endpoints com suas respectivas funções:
 - **PUT / PATCH**: Atualiza registros existentes (todos ou parcialmente).
 - **DELETE**: Remove um registro do banco de dados.
 
-##Uso de códigos de status HTTP:
+## Uso de códigos de status HTTP:
 
-200 OK: Sucesso
-201 Created: Recurso criado com sucesso
-400 Bad Request: Erro na requisição
-401 Unauthorized: Falta de autenticação
-404 Not Found: Recurso não encontrado
-500 Internal Server Error: Erro no servidor
+- **200 OK**: Sucesso
+- **201 Created**: Recurso criado com sucesso
+- **400 Bad Request**: Erro na requisição
+- **401 Unauthorized**: Falta de autenticação
+- **404 Not Found**: Recurso não encontrado
+- **500 Internal Server Error**: Erro no servidor
 
 ## Configuração(.env)
 
-DATABASE_URL= 
-PORT= 
+- DATABASE_URL= 
+- PORT= 
 
 ### Pré-requisitos
 
@@ -34,7 +34,7 @@ PORT=
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/API_Gateway.git
+   git clone https://github.com/seu-usuario/api_services.git
    cd API_Gateway
    npm install
    npm run dev
