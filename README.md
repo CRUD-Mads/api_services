@@ -39,3 +39,70 @@ A API fornece os seguintes endpoints com suas respectivas funções:
    npm install
    npm run dev
    ```
+
+## 🧪 Para testar com o Postman
+Você pode testar os endpoints usando o Postman, seguindo os passos abaixo:
+
+1. Inicie o servidor localmente (ex: http://localhost:3000)
+
+2. Exemplos de requisições:
+
+### 🔹 GET - Listar registros
+      - URL: http://localhost:3000/resources
+      - Método: GET
+      - Descrição: Retorna todos os usuários cadastrados.
+
+### 🔹 GET - Buscar por id
+      - URL: http://localhost:3000/resources/:id
+      - Método: GET
+      - Descrição: Retorna um registro baseado no id.
+
+### 🔹 POST - Criar registro
+      - URL: http://localhost:3000/resources
+      - Método: POST
+      - Body (JSON):
+   
+      {
+          "status": "Confirmado",
+          "nome": "Show de Rock",
+          "data_inicio": "2023-12-15T20:00:00.000Z",
+          "data_fim": "2023-12-15T23:00:00.000Z",
+          "local_id": 1,
+          "preco_entrada": "50.00",
+          "descricao": "Apresentação da banda local",
+          "imagem_url": "https://exemplo.com/imagens/show.jpg"
+      }
+
+### 🔹 PUT - Atualizar registro
+      - URL: http://localhost:3000/resources/:id
+      - Método: PUT
+      - Body (JSON):
+      {
+          "status": "Cancelado",
+          "nome": "Show Gospel (editado - put)",
+          "data_inicio": "2023-12-15T20:00:00.000Z",
+          "data_fim": "2023-12-15T23:00:00.000Z",
+          "local_id": 1,
+          "preco_entrada": "50.00",
+          "descricao": "Apresentação da banda local (editado - put)",
+          "imagem_url": "https://exemplo.com/imagens/show.jpg"
+      }
+
+### 🔹 PATCH - Atualizar registro parcialmente
+      - URL: http://localhost:3000/resources/:id
+      - Método: PATCH
+      - Body (JSON):
+      {
+          "status": "Cancelado",
+          "nome": "Brasil x Argentina (editado parcialmente - patch)",
+          "data_inicio": "2023-12-15T20:00:00.000Z",
+          "data_fim": "2023-12-15T23:00:00.000Z",
+          "local_id": 1,
+          "preco_entrada": "50.00",
+          "descricao": "Apresentação da banda local (editado - put)",
+          "imagem_url": "https://exemplo.com/imagens/show.jpg"
+      }
+
+### 🔹 DELETE - Remover registro
+      - URL: http://localhost:3000/resources/:id
+      - Método: DELETE
