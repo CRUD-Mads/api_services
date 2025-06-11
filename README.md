@@ -2,6 +2,8 @@
 
 Este repositório contém a implementação de um serviço de API RESTful com operações de CRUD (Create, Read, Update, Delete) integradas a um banco de dados.
 
+<img src="src/images/images.png"></img>
+
 ## Funcionalidades
 
 A API fornece os seguintes endpoints com suas respectivas funções:
