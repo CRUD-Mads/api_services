@@ -4,6 +4,17 @@ Este repositório contém a implementação de um serviço de API RESTful com op
 
 <img src="src/images/images.png"></img>
 
+## Equipe do Projeto
+
+| Nome              | Responsabilidade                 |
+|-------------------|----------------------------------|
+| Arthur Nascimento | Refinamento da API Gateway e Model na API Services      |
+| Hellan Lins       | Lógica de Insert na API Services          |
+| Alexandre Veloso  | Lógica de Update na API Services                 |
+| Calebe Xavier         | Lógica de Select na API Services   |
+| Victor Martins         | Lógica de Delete na API Services   |
+
+
 ## Funcionalidades
 
 A API fornece os seguintes endpoints com suas respectivas funções:
