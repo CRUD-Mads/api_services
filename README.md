@@ -2,8 +2,6 @@
 
 Este repositório contém a implementação de um serviço de API RESTful com operações de CRUD (Create, Read, Update, Delete) integradas a um banco de dados.
 
-<img src="src/images/images.png"></img>
-
 ## Equipe do Projeto
 
 | Nome              | Responsabilidade                 |
@@ -14,6 +12,9 @@ Este repositório contém a implementação de um serviço de API RESTful com op
 | Calebe Xavier         | Lógica de Select na API Services   |
 | Victor Martins         | Lógica de Delete na API Services   |
 
+## Diagrama simplificado da arquitetura
+
+<img src="src/images/images.png"></img>
 
 ## Funcionalidades
 
