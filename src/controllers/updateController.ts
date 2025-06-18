@@ -21,7 +21,7 @@ export async function updateFull(req: Request, res: Response) {
     );
     evento.setId(Number(id));
     await evento.updateFull();
-    return res.status(204).send(); // não tem retorno
+    return res.status(200).json({ message: "Evento atualizado com sucesso." });
   } catch (error: any) {
     return res.status(400).json({ error: error.message });
   }
@@ -40,7 +40,7 @@ export async function updatePartial(req: Request, res: Response) {
     }
     eventoAtual.setId(Number(id));
     await eventoAtual.updatePartial(fields);
-    return res.status(204).send(); // não tem retorno
+    return res.status(200).json({ message: "Campo atualizado com sucesso." });
   } catch (error: any) {
     return res.status(400).json({ error: error.message });
   }
