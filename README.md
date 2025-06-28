@@ -15,7 +15,7 @@ Este repositório contém a implementação de um serviço de API RESTful com op
 ## Diagrama simplificado da arquitetura
 
 <img src="src/images/images.png"></img>
-
+(edit)
 ## Funcionalidades
 
 A API fornece os seguintes endpoints com suas respectivas funções:
